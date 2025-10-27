@@ -1,11 +1,11 @@
-name: PR10      
-on: push            
+name: PR10
+on: push
 jobs:
-    ONEJOB:
-        runs-on: windows-latest    
-        steps:
-             - name: Checkout
-               uses: actions/checkout@v5.0.0
+  MyBuild:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
 
-             - name: RUN
-               run: dotnet run
+      - name: Run
+        run: dotnet run
