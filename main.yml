@@ -1,0 +1,14 @@
+name: PR10      # имя, которое будет отображаться в списке workflows
+on: push            # событие, на которое сработает или список событий [push, fork, create, delete]
+
+# Jobs, джобы, задания - кому как нравится
+# Это список в первую очередь
+jobs:
+    ONEJOB:
+        runs-on: windows-latest     # среда выполнения
+        steps:
+             - name: Checkout
+               uses: actions/checkout@v5.0.0
+
+             - name: RUN
+               run: dotnet run
